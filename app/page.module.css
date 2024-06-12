@@ -1,0 +1,86 @@
+.pageContainer{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.filterCont{
+  background: #ffffff;
+  padding: 16px;
+}
+.mainhead{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-bottom: 5px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+.search{
+  width: 600px;
+  padding: 0px 16px,
+}
+.mainBody{
+  margin-top: 90px;
+}
+.productcard{
+  padding: 10px
+}
+.pagination{
+  position: relative;
+  z-index: 99;
+  background: #ffffff;
+  padding: 16px;
+  margin-top: 30px;
+}
+.nodata{
+  padding:68px 16px;
+  text-align: center;
+}
+.sortbar{
+  display: flex;
+  padding: 8px 16px;
+  justify-content: space-between;
+}
+.wraptext {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.cardCont{
+  cursor: pointer;
+}
+.imageContainer {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.details {
+  padding: 16px;
+}
+.details h5 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.details .price{
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+.details p {
+  margin: 0;
+  color: #555;
+}

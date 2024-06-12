@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "../../page.module.css"
 import { Grid, Paper, Typography } from "@mui/material"
+import PropTypes from "prop-types"
 
 const CountBar = ({ count }) => {
   return (
@@ -11,5 +12,7 @@ const CountBar = ({ count }) => {
     </Grid>
   )
 }
-
+CountBar.propTypes = {
+  count: PropTypes.number
+}
 export default CountBar

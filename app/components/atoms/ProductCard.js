@@ -9,6 +9,7 @@ import {
   Typography
 } from "@mui/material"
 import Image from "next/image"
+import PropTypes from "prop-types"
 
 const ProductCard = ({ product }) => {
   return (
@@ -25,9 +26,9 @@ const ProductCard = ({ product }) => {
           />
         </Box>
         <CardContent className={styles.details}>
-          <Tooltip title={product.title} arrow={true} placement="top">
+          <Tooltip title={product?.title} arrow={true} placement="top">
             <Typography gutterBottom variant="h5" className={styles.wraptext}>
-              {product.title}
+              {product?.title}
             </Typography>
           </Tooltip>
           <Typography
@@ -35,14 +36,14 @@ const ProductCard = ({ product }) => {
             color="text.secondary"
             className={styles.price}
           >
-            ${product.price}
+            ${product?.price}
           </Typography>
           <Typography
             variant="body2"
             color="text.secondary"
             className={styles.wraptext}
           >
-            {product.description}
+            {product?.description}
           </Typography>
         </CardContent>
         <Box p={1}>
@@ -54,5 +55,7 @@ const ProductCard = ({ product }) => {
     </Box>
   )
 }
-
+ProductCard.propTypes = {
+  product: PropTypes.object
+}
 export default ProductCard

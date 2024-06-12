@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import styles from "./page.module.css"
 import ProductList from "./components/pages/ProductList"
 import { Box, Grid, Paper, TextField } from "@mui/material"

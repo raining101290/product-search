@@ -16,12 +16,6 @@ const ProductList = () => {
     indexOfFirstProduct,
     indexOfLastProduct
   )
-  console.log(
-    "filteredProducts",
-    filteredProducts,
-    indexOfFirstProduct,
-    indexOfLastProduct
-  )
   //generate the skeleton
   const generateSkeletons = (number) => {
     const skeletons = []

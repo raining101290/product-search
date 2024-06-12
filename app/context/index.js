@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { getProducts } from "../axios/api"
 import { limit } from "../config"
-//import { getProducts } from "../axios/api"
+
 export const AppContext = createContext()
 export const AppContextProvider = ({ children }) => {
   const [search, setSearch] = useState("")

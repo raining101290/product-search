@@ -62,28 +62,28 @@ To create an optimized production build:
 ├──app
 
   ├── axios
-      │  ├── api.js
-      │  ├── axiosInterceptor.js
-      │  └── commonAxiosFunctions.js
+    │  ├── api.js
+    │  ├── axiosInterceptor.js
+    │  └── commonAxiosFunctions.js
 
   ├── components
-      ├── atoms
-      │  ├── Filter.js
-      |  ├── NoData.js
-      │  ├── Pagination.js
-      │  ├── ProductCard.js
-      │  └── SortingBar.js
-      ├── Pages
-      │  ├── ProductList.js
+    ├── atoms
+    │  ├── Filter.js
+    |  ├── NoData.js
+    │  ├── Pagination.js
+    │  ├── ProductCard.js
+    │  └── SortingBar.js
+    ├── Pages
+    │  ├── ProductList.js
   
-  ├── context
-  │   └── index.js
-  ├── config.js
-  ├── favicon.ico
-  ├── globals.css
-  ├── layout.js
-  ├── page.js
-  └── page.module.css
+    ├── context
+    │    └── index.js
+    ├── config.js
+    ├── favicon.ico
+    ├── globals.css
+    ├── layout.js
+    ├── page.js
+    └── page.module.css
 
 ├── public
 

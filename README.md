@@ -1,5 +1,9 @@
 # product-search
 
+Node: version 18.17.1 or higher (Required)
+Next: 14.2.3 (used)
+React or React Dom: 18 or above
+
 This project is a dynamic and responsive product search page for an e-commerce platform, built using Next.js, React.js, and MUI. It features product listings, multi-level filtering, search functionality, pagination, and a responsive design.
 
 ## Features
@@ -22,19 +26,20 @@ This project is a dynamic and responsive product search page for an e-commerce p
 ## Setup Instructions
 
 1. **Clone the Repository**:
-    ```sh
-    git clone https://github.com/raining101290/product-search.git
-    cd product-search
-    ```
+
+   ```sh
+   git clone https://github.com/raining101290/product-search.git
+   cd product-search
+   ```
 
 2. **Install Dependencies**:
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 3. **Run the Development Server**:
-    ```sh
-    npm run dev
-    ```
+   ```sh
+   npm run dev
+   ```
    Open [http://localhost:3000](http://localhost:3000) to view the application in the browser.
 
 ## Build Process
@@ -42,14 +47,15 @@ This project is a dynamic and responsive product search page for an e-commerce p
 To create an optimized production build:
 
 1. **Build the Application**:
-    ```sh
-    npm run build
-    ```
+
+   ```sh
+   npm run build
+   ```
 
 2. **Start the Production Server**:
-    ```sh
-    npm start
-    ```
+   ```sh
+   npm start
+   ```
 
 ## Assumptions
 
@@ -58,8 +64,9 @@ To create an optimized production build:
 - **Price Range**: The price range for filtering is assumed to be between 0 and 1000.
 
 ## Project Structure
+
 .
-    ├──app
+├──app
 
         ├── axios
         │   ├── api.js
@@ -75,7 +82,7 @@ To create an optimized production build:
         │   └── SortingBar.js
         ├── Pages
         │   ├── ProductList.js
-    
+
         ├── context
         │   └── index.js
         ├── config.js
@@ -84,7 +91,7 @@ To create an optimized production build:
         ├── layout.js
         ├── page.js
         └── page.module.css
-    
+
     ├── public
     ├── .eslintrc.json
     ├── .gitignore

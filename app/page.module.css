@@ -1,12 +1,13 @@
-.pageContainer{
+.pageContainer {
   max-width: 1280px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
-.filterCont{
+.filterCont {
   background: #ffffff;
   padding: 16px;
 }
-.mainhead{
+.mainhead {
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -20,30 +21,30 @@
   height: auto;
   box-sizing: border-box;
 }
-.search{
+.search {
   width: 600px;
-  padding: 0px 16px,
+  padding: 0px 16px;
 }
-.mainBody{
+.mainBody {
   margin-top: 90px;
 }
-.productcard{
-  padding: 10px
+.productcard {
+  padding: 10px;
 }
-.pagination{
+.pagination {
   position: relative;
   z-index: 99;
   background: #ffffff;
-  padding: 16px;
+  padding: 8px;
   margin-top: 30px;
 }
-.nodata{
-  padding:68px 16px;
+.nodata {
+  padding: 60px 16px;
   text-align: center;
 }
-.sortbar{
+.countBar {
   display: flex;
-  padding: 8px 16px;
+  padding: 16px 16px;
   justify-content: space-between;
 }
 .wraptext {
@@ -53,7 +54,7 @@
   text-overflow: ellipsis;
   display: block;
 }
-.cardCont{
+.cardCont {
   cursor: pointer;
 }
 .imageContainer {
@@ -75,7 +76,7 @@
   font-size: 18px;
   font-weight: 600;
 }
-.details .price{
+.details .price {
   font-weight: bold;
   margin: 0 0 8px 0;
   font-size: 18px;

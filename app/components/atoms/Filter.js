@@ -1,6 +1,13 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect } from "react"
 import { AppContext } from "../../context"
-import { TextField, MenuItem, Button, Grid, Typography, Slider } from '@mui/material'
+import {
+  TextField,
+  MenuItem,
+  Button,
+  Grid,
+  Typography,
+  Slider
+} from "@mui/material"
 
 const categories = [
   "electronics",
@@ -11,9 +18,9 @@ const categories = [
 
 const Filter = () => {
   const { search, setSearch, filterProducts } = useContext(AppContext)
-  const [selectedCategory, setSelectedCategory] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState("")
   const [priceRange, setPriceRange] = useState([0, 1000])
-  const [isResetDisabled, setIsResetDisabled] = useState(true);
+  const [isResetDisabled, setIsResetDisabled] = useState(true)
 
   const handlePriceChange = (event, newValue) => {
     setPriceRange(newValue)
@@ -21,26 +28,30 @@ const Filter = () => {
 
   //enable or disable reset button
   useEffect(() => {
-    if (selectedCategory || search || (priceRange[0] !== 0 || priceRange[1] !== 1000)) {
-      setIsResetDisabled(false);
+    if (
+      selectedCategory ||
+      search ||
+      priceRange[0] !== 0 ||
+      priceRange[1] !== 1000
+    ) {
+      setIsResetDisabled(false)
     } else {
-      setIsResetDisabled(true);
+      setIsResetDisabled(true)
     }
     //eslint-disable-next-line
-  }, [selectedCategory, search, priceRange]);
+  }, [selectedCategory, search, priceRange])
 
-
-  useEffect(()=>{
-    filterProducts({ category: selectedCategory, priceRange:priceRange })
+  useEffect(() => {
+    filterProducts({ category: selectedCategory, priceRange: priceRange })
     //eslint-disable-next-line
   }, [selectedCategory, priceRange])
 
   const handleReset = () => {
-    setSelectedCategory('');
-    setSearch('');
-    setPriceRange([0, 1000]);
-    filterProducts({ category: '', searchTerm: '', priceRange: [0, 1000] });
-  };
+    setSelectedCategory("")
+    setSearch("")
+    setPriceRange([0, 1000])
+    filterProducts({ category: "", searchTerm: "", priceRange: [0, 1000] })
+  }
 
   return (
     <Grid container alignItems="center">
@@ -53,7 +64,7 @@ const Filter = () => {
           select
           label="Select Category"
           value={selectedCategory}
-          size='small'
+          size="small"
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
           {categories.map((category) => (
@@ -74,9 +85,9 @@ const Filter = () => {
         />
       </Grid>
       <Grid item xs={12}>
-        <Button 
-          disabled={isResetDisabled} 
-          variant="text" 
+        <Button
+          disabled={isResetDisabled}
+          variant="text"
           onClick={handleReset}
           fullWidth={true}
         >

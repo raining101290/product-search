@@ -59,37 +59,36 @@ To create an optimized production build:
 
 ## Project Structure
 
-├─app
+─app
+  ─ axios
+    ─ api.js
+    ─ axiosInterceptor.js
+    ─ commonAxiosFunctions.js
 
-  ├─ axios
-    ├─ api.js
-    ├─ axiosInterceptor.js
-    └─ commonAxiosFunctions.js
-
-  ├─ components
+  ─ components
     ─ atoms
-    ├─ Filter.js
-    ├─ NoData.js
-    ├─ Pagination.js
-    ├─ ProductCard.js
-    └── SortingBar.js
+    ─ Filter.js
+    ─ NoData.js
+    ─ Pagination.js
+    ─ ProductCard.js
+    ── SortingBar.js
     ─ Pages
-    ├─ ProductList.js
+    ─ ProductList.js
   
-  ├─ context
-  │   └─ index.js
-  ├─ config.js
-  ├─ favicon.ico
-  ├─ globals.css
-  ├─ layout.js
-  ├─ page.js
-  └─ page.module.css
+  ─ context
+    ─ index.js
+  ─ config.js
+  ─ favicon.ico
+  ─ globals.css
+  ─ layout.js
+  ─ page.js
+  ─ page.module.css
 
-├─ public
+─ public
 
-├─ .eslintrc.json
-├─ .gitignore
-├─ jsconfig.json
-├─ next.config.mjs
-├─ package.json
-└─ README.md
+─ .eslintrc.json
+─ .gitignore
+─ jsconfig.json
+─ next.config.mjs
+─ package.json
+─ README.md

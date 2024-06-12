@@ -11,7 +11,9 @@ export default function Home() {
   const { search, setSearch, filterProducts } = useContext(AppContext)
 
   useEffect(() => {
-    filterProducts({ searchTerm: search })
+    if (search) {
+      filterProducts({ searchTerm: search })
+    }
     //eslint-disable-next-line
   }, [search])
 

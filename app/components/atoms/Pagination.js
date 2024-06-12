@@ -6,9 +6,7 @@ import { AppContext } from "@/app/context"
 const PaginationComponent = () => {
   const { filteredProducts, currentPage, productsPerPage, setCurrentPage } =
     useContext(AppContext)
-
   const pageCount = Math.ceil(filteredProducts.length / productsPerPage)
-
   const handleChange = (event, value) => {
     setCurrentPage(value)
   }

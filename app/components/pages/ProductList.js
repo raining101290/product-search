@@ -21,7 +21,7 @@ const ProductList = () => {
     const skeletons = []
     for (let i = 0; i < number; i++) {
       skeletons.push(
-        <Grid key={i} item xs={6} sm={4} md={3}>
+        <Grid key={i} item xs={6} md={3}>
           <Skeleton variant="rounded" width="100%" height={200} />
           <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
           <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
@@ -35,7 +35,7 @@ const ProductList = () => {
 
   const renderContent = () => {
     if (status === "loading") {
-      return generateSkeletons(4)
+      return generateSkeletons(8)
     } else if (status === "succeeded") {
       return currentProducts.length > 0 ? (
         currentProducts.map((product, index) => (

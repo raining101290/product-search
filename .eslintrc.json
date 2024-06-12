@@ -1,11 +1,24 @@
 {
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error"]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   }
 }

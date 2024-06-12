@@ -58,37 +58,37 @@ To create an optimized production build:
 - **Price Range**: The price range for filtering is assumed to be between 0 and 1000.
 
 ## Project Structure
+.
+    ├──app
 
-├──app
+        ├── axios
+        │   ├── api.js
+        │   ├── axiosInterceptor.js
+        │   └── commonAxiosFunctions.js
 
-    ├── axios
-    │   ├── api.js
-    │   ├── axiosInterceptor.js
-    │   └── commonAxiosFunctions.js
-
-    ├── components
-    ├── atoms
-    │   ├── Filter.js
-    |   ├── NoData.js
-    │   ├── Pagination.js
-    │   ├── ProductCard.js
-    │   └── SortingBar.js
-    ├── Pages
-    │   ├── ProductList.js
-  
-    ├── context
-    │   └── index.js
-    ├── config.js
-    ├── favicon.ico
-    ├── globals.css
-    ├── layout.js
-    ├── page.js
-    └── page.module.css
+        ├── components
+        ├── atoms
+        │   ├── Filter.js
+        |   ├── NoData.js
+        │   ├── Pagination.js
+        │   ├── ProductCard.js
+        │   └── SortingBar.js
+        ├── Pages
+        │   ├── ProductList.js
     
-├── public
-├── .eslintrc.json
-├── .gitignore
-├── jsconfig.json
-├── next.config.mjs
-├── package.json
-└── README.md
+        ├── context
+        │   └── index.js
+        ├── config.js
+        ├── favicon.ico
+        ├── globals.css
+        ├── layout.js
+        ├── page.js
+        └── page.module.css
+    
+    ├── public
+    ├── .eslintrc.json
+    ├── .gitignore
+    ├── jsconfig.json
+    ├── next.config.mjs
+    ├── package.json
+    └── README.md

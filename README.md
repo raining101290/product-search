@@ -86,7 +86,6 @@ To create an optimized production build:
     └── page.module.css
     
 ├── public
-
 ├── .eslintrc.json
 ├── .gitignore
 ├── jsconfig.json

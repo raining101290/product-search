@@ -1,3 +1,4 @@
+"use client"
 import React, { useContext } from "react"
 import { AppContext } from "../../context"
 import ProductCard from "../atoms/ProductCard"
@@ -5,6 +6,7 @@ import { Grid, Skeleton } from "@mui/material"
 import PaginationComponent from "../atoms/Pagination"
 import NoData from "../atoms/NoData"
 import CountBar from "../atoms/CountBar"
+import Link from "next/link"
 
 const ProductList = () => {
   const { filteredProducts, status, error, currentPage, productsPerPage } =
@@ -26,7 +28,6 @@ const ProductList = () => {
           <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
           <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
           <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
-          <Skeleton variant="rounded" width="100%" height={40} />
         </Grid>
       )
     }
@@ -40,7 +41,9 @@ const ProductList = () => {
       return currentProducts.length > 0 ? (
         currentProducts.map((product, index) => (
           <Grid item key={product.id} xs={6} sm={4} md={3}>
-            <ProductCard key={index} product={product} />
+            <Link href={`/products/${product.id}`}>
+              <ProductCard key={index} product={product} />
+            </Link>
           </Grid>
         ))
       ) : (
@@ -54,7 +57,7 @@ const ProductList = () => {
   }
 
   return (
-    <>
+    <Grid item xs={12} sm={8} md={8}>
       <Grid container spacing={2}>
         <CountBar count={filteredProducts.length} />
         {renderContent()}
@@ -62,7 +65,7 @@ const ProductList = () => {
       {status === "succeeded" && currentProducts.length > 0 && (
         <PaginationComponent />
       )}
-    </>
+    </Grid>
   )
 }
 

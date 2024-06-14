@@ -1,13 +1,6 @@
 import React from "react"
 import styles from "../../page.module.css"
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Tooltip,
-  Typography
-} from "@mui/material"
+import { Box, Card, CardContent, Tooltip, Typography } from "@mui/material"
 import Image from "next/image"
 import PropTypes from "prop-types"
 
@@ -46,11 +39,6 @@ const ProductCard = ({ product }) => {
             {product?.description}
           </Typography>
         </CardContent>
-        <Box p={1}>
-          <Button variant="outlined" fullWidth={true} size="small">
-            Add to Cart
-          </Button>
-        </Box>
       </Card>
     </Box>
   )

@@ -2,6 +2,7 @@
 import React, { createContext, useCallback, useMemo, useState } from "react"
 import PropTypes from "prop-types"
 import useProducts from "../customHooks/useProducts"
+import { useSearchParams } from "next/navigation"
 
 export const AppContext = createContext()
 export const AppContextProvider = ({ children }) => {
@@ -14,11 +15,13 @@ export const AppContextProvider = ({ children }) => {
     setFilteredProducts,
     setError
   } = useProducts()
+  //const router = useRouter()
+  const searchParams = useSearchParams()
+  const searchValue = searchParams.get("search")
 
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState(searchValue || "")
   const [currentPage, setCurrentPage] = useState(1)
-  const [productsPerPage] = useState(12)
-
+  const [productsPerPage] = useState(8)
   //Function to filter products from the api result
   const filterProducts = useCallback(
     (filters) => {
@@ -70,6 +73,7 @@ export const AppContextProvider = ({ children }) => {
       products,
       filteredProducts,
       search,
+      setSearch,
       status,
       error,
       currentPage,

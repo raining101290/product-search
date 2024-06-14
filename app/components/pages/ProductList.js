@@ -41,7 +41,7 @@ const ProductList = () => {
       return currentProducts.length > 0 ? (
         currentProducts.map((product, index) => (
           <Grid item key={product.id} xs={6} sm={4} md={3}>
-            <Link href={`/products/${product.id}`}>
+            <Link prefetch={true} href={`/products/${product.id}`}>
               <ProductCard key={index} product={product} />
             </Link>
           </Grid>

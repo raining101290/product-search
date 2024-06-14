@@ -114,6 +114,12 @@
   align-items: center;
   justify-content: center;
 }
+.centeredItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
 .details {
   padding: 16px;
 }

@@ -9,7 +9,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <Paper elevation={1} className={styles.menulink}>
-          <Link href="/products">
+          <Link prefetch={true} href="/products">
             <code className={styles.code}>Go to Products page</code>
           </Link>
         </Paper>

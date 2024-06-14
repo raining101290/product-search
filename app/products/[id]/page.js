@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styles from "../../page.module.css"
-import { Box, Link, Paper, Typography } from "@mui/material"
+import { Box, Grid, Link, Paper, Typography } from "@mui/material"
 
 import Image from "next/image"
 import { getSingleProduct } from "@/app/axios/api"
@@ -28,22 +28,30 @@ const ProductDetails = async ({ params }) => {
         <Header />
         {product.data ? (
           <Paper elevation={1} className={styles.singlePage}>
-            <Image
-              src={product.data.image ? product.data.image : ""}
-              alt={product.data.name ? product.data.name : ""}
-              width={200}
-              height={300}
-              priority={true}
-            />
-            <Typography variant="h4" component="h1" gutterBottom>
-              {product.data.title}
-            </Typography>
-            <Typography variant="h6" component="h2" gutterBottom>
-              ${product.data.price}
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              {product.data.description}
-            </Typography>
+            <Grid container>
+              <Grid item xs={12} md={4}>
+                <Box className={styles.centeredItem}>
+                  <Image
+                    src={product.data.image ? product.data.image : ""}
+                    alt={product.data.name ? product.data.name : ""}
+                    width={200}
+                    height={300}
+                    priority={true}
+                  />
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <Typography variant="h4" component="h1" gutterBottom>
+                  {product.data.title}
+                </Typography>
+                <Typography variant="h6" component="h2" gutterBottom>
+                  ${product.data.price}
+                </Typography>
+                <Typography variant="body1" gutterBottom>
+                  {product.data.description}
+                </Typography>
+              </Grid>
+            </Grid>
           </Paper>
         ) : (
           <Paper elevation={1} className={styles.singlePage}>

@@ -9,8 +9,7 @@ import {
   Grid,
   Typography,
   Slider,
-  Paper,
-  Box
+  Paper
 } from "@mui/material"
 import { useRouter } from "next/navigation"
 

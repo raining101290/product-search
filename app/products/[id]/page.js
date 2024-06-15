@@ -26,7 +26,7 @@ const ProductDetails = async ({ params }) => {
     <>
       <Box className={styles.pageContainer}>
         <Header />
-        {product.data ? (
+        {product?.data ? (
           <Paper elevation={1} className={styles.singlePage}>
             <Grid container>
               <Grid item xs={12} md={4}>
@@ -35,7 +35,7 @@ const ProductDetails = async ({ params }) => {
                     src={product.data.image ? product.data.image : ""}
                     alt={product.data.name ? product.data.name : ""}
                     width={200}
-                    height={300}
+                    height={220}
                     priority={true}
                   />
                 </Box>

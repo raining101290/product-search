@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { AppContextProvider } from "./context"
 import PropTypes from "prop-types"
+import { Box } from "@mui/material"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,9 +17,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Suspense>
-          <AppContextProvider>{children}</AppContextProvider>
-        </Suspense>
+        <Box>
+          <Suspense>
+            <AppContextProvider>{children}</AppContextProvider>
+          </Suspense>
+        </Box>
       </body>
     </html>
   )

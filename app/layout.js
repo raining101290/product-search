@@ -8,9 +8,8 @@ import { Box } from "@mui/material"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "E-Commerce | Search Product",
-  description:
-    "Search and place your order quickly and securely. Everything on stock, fast delivery ✔ Official dealer of all offered brands"
+  title: "E-Shop | Home",
+  description: "E-Shop is a largest shopers platform"
 }
 
 export default function RootLayout({ children }) {

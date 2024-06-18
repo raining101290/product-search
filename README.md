@@ -65,38 +65,39 @@ To create an optimized production build:
 
 ## Project Structure
 
+./
 ├──app
 
-├── axios
-│ ├── api.js
-│ ├── axiosInterceptor.js
-│ └── commonAxiosFunctions.js
+      ├── axios
+      │   ├── api.js
+      │   ├── axiosInterceptor.js
+      │   └── commonAxiosFunctions.js
 
-├── components
-├── atoms
-│ ├── Filter.js
-| ├── NoData.js
-│ ├── Pagination.js
-│ ├── ProductCard.js
-│ └── SortingBar.js
-├── Pages
-│ ├── ProductList.js
+      ├── components
+      ├── atoms
+      │   ├── Filter.js
+      |   ├── NoData.js
+      │   ├── Pagination.js
+      │   ├── ProductCard.js
+      │   └── SortingBar.js
+      ├── Pages
+      │   ├── ProductList.js
 
-├── context
-│ └── index.js
-├── config.js
-├── favicon.ico
-├── globals.css
-├── layout.js
-├── page.js
-└── page.module.css
+      ├── context
+      │   └── index.js
+      ├── config.js
+      ├── favicon.ico
+      ├── globals.css
+      ├── layout.js
+      ├── page.js
+      └── page.module.css
 
-├── products
-├── [id]
-├── loading.js
-├── no-data.js
-└── page.js
-└── page.js
+      ├── products
+         ├── [id]
+            ├── loading.js
+            ├── no-data.js
+            └── page.js
+         └── page.js
 
 ├── public
 ├── .eslintrc.json
